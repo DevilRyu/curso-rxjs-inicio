@@ -7,4 +7,3 @@ const observer: Observer<any> = {
     complete: () => console.info('complete')
 };
 
-
