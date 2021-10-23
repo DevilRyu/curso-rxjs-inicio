@@ -6,4 +6,3 @@ const observer: Observer<any> = {
     error: null,
     complete: () => console.info('complete')
 };
-
