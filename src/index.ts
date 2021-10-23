@@ -7,6 +7,3 @@ const observer: Observer<any> = {
     error: (err: any) => console.warn('error en subs: ', err),
     complete: () => console.info('complete')
 };
-
-
-
