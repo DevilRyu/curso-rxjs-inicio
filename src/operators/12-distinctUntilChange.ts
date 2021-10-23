@@ -1,11 +1,11 @@
-import {Observable, Observer, from} from 'rxjs';
+import {Observable, of, from} from 'rxjs';
 import {distinctUntilChanged} from 'rxjs/operators';
 
-const observer: Observer<any> = {
-    next: (value: any) => console.log('next: ', value),
-    error: null,
-    complete: () => console.info('complete')
-};
+const numeros$: Observable<number | string> = of(1, '1', 1, 3, 3, 2, 2, 4, 4, 5, 3, 1);
+
+numeros$.pipe(
+    distinctUntilChanged()
+).subscribe(console.log);
 
 interface Personaje {
     nombre: string;
