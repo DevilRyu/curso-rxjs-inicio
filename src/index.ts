@@ -1,5 +1,6 @@
-import {fromEvent, Observable, Observer, of, interval} from 'rxjs';
-import {map, takeUntil, catchError, debounceTime, mergeMap, take} from "rxjs/operators";
+import {fromEvent, Observable, Observer} from 'rxjs';
+import {ajax} from 'rxjs/ajax';
+import {map, pluck, debounceTime, switchMap} from "rxjs/operators";
 
 const observer: Observer<any> = {
     next: (value: any) => console.log('next: ', value),
