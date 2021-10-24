@@ -1,4 +1,4 @@
-import {of, interval, Observable, Observer, merge, fromEvent} from 'rxjs';
+import {of, interval, Observable, Observer, combineLatestWith, fromEvent} from 'rxjs';
 import {ajax} from 'rxjs/ajax';
 import {pluck, startWith, take} from "rxjs/operators";
 
