@@ -1,6 +1,6 @@
-import {fromEvent, interval, Observable, Observer, of} from 'rxjs';
+import {of, interval, Observable, Observer, concat} from 'rxjs';
 import {ajax} from 'rxjs/ajax';
-import {startWith, endWith} from "rxjs/operators";
+import {startWith, take} from "rxjs/operators";
 
 const observer: Observer<any> = {
     next: (value: any) => console.log('next: ', value),
